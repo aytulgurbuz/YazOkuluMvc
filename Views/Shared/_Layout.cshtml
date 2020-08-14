@@ -1,0 +1,128 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title>Aytuls MVC Blog Home </title>
+    <!-- Bootstrap core CSS -->
+    <link href="~/Content/startbootstrap-blog-home-gh-pages/bootstrap.min.css" rel="stylesheet">
+    <!-- Custom styles for this template -->
+    <link href="~/Content/startbootstrap-blog-home-gh-pagescss/blog-home.css" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark ">
+        <div class="container">
+            <a class="navbar-brand" href="#">Aytul's Blog</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="/Home/Index/">
+                            Anasayfa
+                            <span class="sr-only">(current)</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/Home/Hakkimizda/">Ben kimim?</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Servis</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/Home/iletisim/">İletişim</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!-- Page Content -->
+    <div class="container">
+        <div class="row">
+            <!-- Blog Entries Column -->
+            <div class="col-md-8">
+                @RenderBody()
+            </div>
+               
+                <!-- Blog Post -->
+               
+           
+                       
+            <!-- Sidebar Widgets Column -->
+            <div class="col-md-4">
+                <!-- Search Widget -->
+                <div class="card my-4">
+                    
+                    <h5 class="card-header">Ara</h5>
+                    <div class="card-body">
+                        <div class="input-group">
+                            <input type="text" class="form-control" placeholder="Kastamonu için">
+                            <span class="input-group-append">
+                                <button class="btn btn-secondary" type="button">Ara ve bul!</button>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Categories Widget -->
+                <div class="card my-4">
+                    <h5 class="card-header">Kastamonu</h5>
+                    <div class="card-body">
+                        <div class="row">
+                            <div class="col-lg-6"> 
+                                <ul class="list-unstyled mb-0">
+                                    <li>
+                                        <a href="#"> Haberleri</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Yemekleri</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Kültürü</a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="col-lg-6">
+                                <ul class="list-unstyled mb-0">
+                                    <li>
+                                        <a href="#">KastamonuSpor</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">İlçeleri</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Ödülleri</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Side Widget -->
+                <div class="card my-4">
+                    <h5 class="card-header">Neden böyle bir website var?</h5>
+                    <div class="card-body">
+                        Yaptığım ilk ASP.NET MVC projemde kendimi ve memleketimi tanıtmak istedim,zaman ayırdığınız için teşekkür ederim :)
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- /.row -->
+    </div>
+    <!-- /.container -->
+    <!-- Footer -->
+    <footer class="py-5 bg-dark">
+        <div class="container">
+            <p class="m-0 text-center text-white">Copyright &copy; Your Website @DateTime.Now.Year</p>
+        </div>
+        <!-- /.container -->
+    </footer>
+    <!-- Bootstrap core JavaScript -->
+    <script src="~/Content/startbootstrap-blog-home-gh-pagescss/jquery.min.js"></script>
+    <script src="~/Content/startbootstrap-blog-home-gh-pagescss/bootstrap.bundle.min.js"></script>
+</body>
+</html>
