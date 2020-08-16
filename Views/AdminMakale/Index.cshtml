@@ -6,64 +6,76 @@
     ViewBag.Title = "Index";
     Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
 }
-<br />
-<br />
-<br/>
-<h2>Index</h2>
 
-<p>
-    @Html.ActionLink("Create New", "Create")
-</p>
-<table class="table">
-    <tr>
-        <th>
-            @Html.DisplayNameFor(model => model.Kategori.KategoriAd)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Baslik)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Icerik)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Foto)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Tarih)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.UyeId)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Okunma)
-        </th>
-        <th></th>
-    </tr>
 
-@foreach (var item in Model) {
-    <tr>
-        <td>
-            @Html.DisplayFor(modelItem => item.Kategori.KategoriAd)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Baslik)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Icerik)
-        </td>
-        <td>
-            <img width="75" src="@item.Foto"/>
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Tarih)
-        </td>
-       
-        <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.MakaleId }) |
-            @Html.ActionLink("Details", "Details", new { id=item.MakaleId }) |
-            @Html.ActionLink("Delete", "Delete", new { id=item.MakaleId })
-        </td>
-    </tr>
-}
+  <h3>MAKALELER</h3>
 
-</table>
+
+    <table class="table">
+        <tr>
+            
+            <th>
+
+            </th>
+            <th>
+
+            </th>
+
+            <th>
+                @Html.Label("Kategori Adı")
+            </th>
+            <th>
+                @Html.Label("Başlık")
+            </th>
+            <th>
+                @Html.Label("İçeriği")
+            </th>
+
+            <th>
+                @Html.Label("Foto")
+            </th>
+            <th>
+                @Html.Label("Tarih")
+            </th>
+
+
+            <th>
+                @Html.Label("İşlemler") |
+                @Html.ActionLink("+Yeni Makale", "Create")
+            </th>
+        </tr>
+
+
+
+        @foreach (var item in Model)
+        {
+
+            <tr>
+                <td></td>
+                <td></td>
+
+                <td>
+                    @Html.DisplayFor(modelItem => item.Kategori.KategoriAd)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Baslik)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Icerik)
+                </td>
+                <td>
+                    <img width="75" src="@item.Foto" />
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Tarih)
+                </td>
+
+                <td>
+
+                    @Html.ActionLink("Düzenle", "Edit", new { id = item.MakaleId }) |
+                    @Html.ActionLink("Sil", "Delete", new { id = item.MakaleId })
+                </td>
+            </tr>
+        }
+
+    </table>

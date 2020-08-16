@@ -29,8 +29,8 @@ namespace MvcBlog.Models
         [StringLength(50)]
         public string AdSoyad { get; set; }
 
-        [StringLength(250)]
-        public string Fotograf { get; set; }
+        
+       
 
         public int? YetkiId { get; set; }
 
@@ -38,5 +38,6 @@ namespace MvcBlog.Models
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Yorum> Yorums { get; set; }
+        public string Foto { get; internal set; }
     }
 }

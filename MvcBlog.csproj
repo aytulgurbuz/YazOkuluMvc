@@ -164,8 +164,10 @@
   <ItemGroup>
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\AdminController.cs" />
+    <Compile Include="Controllers\AdminKategoriController.cs" />
     <Compile Include="Controllers\AdminMakaleController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\UyeController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -184,7 +186,6 @@
     <Content Include="ApplicationInsights.config">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="Views\_ViewStart.cshtml" />
     <Content Include="Views\Shared\_Layout.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
@@ -199,6 +200,14 @@
     <Content Include="Views\Home\KategoriPartial.cshtml" />
     <Content Include="Views\AdminMakale\Index.cshtml" />
     <Content Include="Views\AdminMakale\Create.cshtml" />
+    <Content Include="Views\AdminMakale\Edit.cshtml" />
+    <Content Include="Views\AdminMakale\Delete.cshtml" />
+    <Content Include="Views\AdminKategori\Create.cshtml" />
+    <Content Include="Views\AdminKategori\Delete.cshtml" />
+    <Content Include="Views\AdminKategori\Details.cshtml" />
+    <Content Include="Views\AdminKategori\Edit.cshtml" />
+    <Content Include="Views\AdminKategori\Index.cshtml" />
+    <Content Include="Views\Uye\Create.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -210,6 +219,7 @@
     <Folder Include="App_Data\" />
     <Folder Include="Content\startbootstrap-blog-post-gh-pages\" />
     <Folder Include="Uploads\MakaleFoto\" />
+    <Folder Include="Uploads\UyeFoto\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
