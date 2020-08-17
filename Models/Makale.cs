@@ -21,7 +21,6 @@ namespace MvcBlog.Models
         [StringLength(500)]
         public string Baslik { get; set; }
 
-        [StringLength(500)]
         public string Icerik { get; set; }
 
         [StringLength(500)]
@@ -36,6 +35,8 @@ namespace MvcBlog.Models
         public int? Okunma { get; set; }
 
         public virtual Kategori Kategori { get; set; }
+
+        public virtual Uye Uye { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Yorum> Yorums { get; set; }
