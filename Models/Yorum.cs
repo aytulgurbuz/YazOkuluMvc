@@ -17,8 +17,7 @@ namespace MvcBlog.Models
 
         public int? MakaleId { get; set; }
 
-        [StringLength(10)]
-        public string Tarih { get; set; }
+        public DateTime? Tarih { get; set; }
 
         public virtual Makale Makale { get; set; }
 

@@ -25,10 +25,6 @@ namespace MvcBlog.Models
                 .HasMany(e => e.Makales)
                 .WithMany(e => e.Etikets)
                 .Map(m => m.ToTable("MakaleEtiket").MapLeftKey("EtiketId").MapRightKey("MakaleId"));
-
-            modelBuilder.Entity<Yorum>()
-                .Property(e => e.Tarih)
-                .IsFixedLength();
         }
     }
 }
